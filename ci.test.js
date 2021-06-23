@@ -11,8 +11,9 @@ describe('CI sequence', () => {
     expect(/.*#.*/ig.test(fileContents)).toBe(true);
   });
 
-  // TODO add the tests between these comments =>
-
-  // TODO <= add the tests between these comments
+  it('does not contain the sneaky bug', () => {
+    expect( /.*sneaky\s+bug.*/gi.test(fileContents)).toBe(false);
+  });
+  
 
 });
